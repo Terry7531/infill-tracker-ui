@@ -292,3 +292,36 @@
   background: #C6F6D5;
   border-color: #68D391;
 }
+
+/* ── Mobile: full-width card layout ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Filter tabs scroll horizontally */
+  .tl-filters { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
+  .tl-filter   { flex-shrink: 0; font-size: 0.78rem; padding: 0.45rem 0.65rem; }
+
+  /* Summary bar wraps */
+  .tl-summary { flex-wrap: wrap; gap: 0.6rem; padding: 0.85rem; }
+  .tl-summary__stats { flex-wrap: wrap; gap: 0.5rem; }
+  .tl-summary__track { min-width: 80px; }
+
+  /* Table wrapper full width */
+  .tl-table-wrap { border-radius: var(--radius-md); overflow: hidden; }
+
+  /* Hide table completely on mobile — show nothing from the table */
+  .tl-table         { display: none; }
+
+  /* We use a separate card list injected by the JS — but since we can't
+     easily inject JSX from CSS, we instead make the table scroll horizontally
+     on mobile so all columns are reachable */
+  .tl-table-wrap    { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tl-table         { display: table; min-width: 600px; }
+
+  /* Shrink column padding */
+  .tl-th, .tl-td   { padding: 0.5rem 0.5rem; }
+  .tl-th--name, .tl-td--name { min-width: 140px; }
+  .tl-th--owner, .tl-td--owner { min-width: 80px; }
+  .tl-btn           { font-size: 0.68rem; padding: 0.28rem 0.45rem; }
+
+  /* Shrink code badge */
+  .tl-code { font-size: 0.7rem; padding: 1px 4px; }
+}
