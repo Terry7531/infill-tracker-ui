@@ -294,7 +294,7 @@
 }
 
 /* ── Mobile: full-width card layout ───────────────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 896px) {
   /* Filter tabs scroll horizontally */
   .tl-filters { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; -webkit-overflow-scrolling: touch; }
   .tl-filter   { flex-shrink: 0; font-size: 0.78rem; padding: 0.45rem 0.65rem; }

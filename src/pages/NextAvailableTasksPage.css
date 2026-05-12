@@ -264,7 +264,7 @@
 }
 
 /* ── Mobile ───────────────────────────────────────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 896px) {
   /* Summary strip scrolls horizontally */
   .nat-strip { overflow-x: auto; width: 100%; box-sizing: border-box; -webkit-overflow-scrolling: touch; }
   .nat-strip__item { padding: 0.65rem 0.85rem; flex-shrink: 0; }

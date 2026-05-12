@@ -14,7 +14,7 @@
   gap: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 896px) {
   .page-shell {
     padding: 1rem 0.75rem 3rem;
   }
