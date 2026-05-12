@@ -1,5 +1,6 @@
-// In dev: Vite proxies /api to localhost. In production: use the Railway API URL.
-const BASE = import.meta.env.VITE_API_URL ?? '/api';
+// Dev: Vite proxies /api to localhost. Production: direct Railway API URL.
+const IS_DEV = import.meta.env.DEV;
+const BASE   = IS_DEV ? '/api' : 'https://infill-tracker-api-production.up.railway.app/api';
 
 async function request(path, options = {}) {
   const res = await fetch(`${BASE}${path}`, {
